@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+/* var declaration */
+:root {
+  /* ### Primary */
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+
+  /* ### Neutral */
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+  --stats-paragraph: hsla(0, 0%, 100%, 0.6);
+}
+
+/* components */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-size: 15px;
+  background: var(--main-background);
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+p {
+  color: var(--paragraph);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+/* styling */
+
+/* Card */
+.card {
+  background: var(--card-background);
+  margin: 6.5rem auto;
+  max-width: 325px;
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Img */
+.card .img {
+  position: relative;
+}
+
+.img div {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent);
+  opacity: 0.5;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+/* Text-component */
+
+/* Main Text Component */
+.text-component {
+  padding: 0 1rem;
+}
+
+.text-component h1 {
+  margin-top: 2rem;
+}
+
+.description {
+  padding: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Stats Component */
+.stats {
+  margin-bottom: 2rem;
+}
+
+.stats h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stats p {
+  color: var(--stats-paragraph);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* Attribution */
+.attribution {
+  color: white;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+/* Media Queries */
+@media screen and (min-width: 1200px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1110px;
+    width: 100%;
+    text-align: left;
+    margin: 15rem auto;
+  }
+
+  .card img {
+    width: 555px;
+    object-fit: cover;
+  }
+
+  .text-component {
+    max-width: 555px;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .text-component .description {
+    padding: 2rem 0;
+    margin-right: 2.5rem;
+  }
+
+  .text-component h1 {
+    margin-top: 0;
+    margin-right: 2.5rem;
+  }
+
+  .stats {
+    display: flex;
+  }
+
+  .stats div {
+    padding-right: 4rem;
+  }
+
+  .stats {
+    margin-bottom: 0;
+  }
+}
