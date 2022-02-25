@@ -134,7 +134,12 @@ p {
     object-fit: cover;
   }
 
+  .img {
+    order: 2;
+  }
+
   .text-component {
+    order: 1;
     max-width: 555px;
     padding: 4rem;
     display: flex;
